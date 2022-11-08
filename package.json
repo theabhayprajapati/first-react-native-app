@@ -7,15 +7,19 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build": "expo build",
+    "build": "eas build",
     "build:android": "expo build:android",
     "build:ios": "expo build:ios"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.0",
+    "eas-cli": "^2.6.0",
     "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
-    "react-native": "0.69.6"
+    "react-dom": "18.0.0",
+    "react-native": "0.69.6",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

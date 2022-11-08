@@ -1,9 +1,6 @@
 import { useState } from "react";
-import {
-  StyleSheet,
-  Text, TextInput, TouchableOpacity, View
-} from "react-native";
-import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+
 import Task from "./components/task/task.component";
 
 
@@ -30,12 +27,12 @@ export default function App() {
         </Text>
         <View style={styles.items}>
           {/* all tasks */}
-            {tasks.map((task, index) => (
-              <TouchableOpacity key={index} onPress={() => handlerDeleteTask(index)}>
-                <Task task={task} />
-              </TouchableOpacity>
-            ))}
-          
+          {tasks.map((task, index) => (
+            <TouchableOpacity key={index} onPress={() => handlerDeleteTask(index)}>
+              <Task task={task} />
+            </TouchableOpacity>
+          ))}
+
         </View>
       </View>
       <KeyboardAvoidingView
